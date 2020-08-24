@@ -1,11 +1,8 @@
+const express = require("express");
 
-const express = require('express');
+const domains = require("../routes/domains.route");
 
-const index = require('../routes/index.route');
-
-
-module.exports = function(app) {
-    app.use(express.json());
-    app.use('/index', index);  
+module.exports = (app) => {
+  app.use(express.json());
+  app.use("/domains", domains);
 };
-    

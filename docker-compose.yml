@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - APP_PORT=3000
+      - APP_API_KEY=ff8e0385-1e87-4661-ba5d-b25e16fd67a0
+      - APP_NOME_CAND=Thiago
+      - APP_SOBREN_CAND=Barbosa da silva
+      - APP_HUBSPOT_DELAY=500
+    ports:
+      - 3000:3000
