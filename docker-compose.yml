@@ -13,3 +13,5 @@ services:
       - APP_HUBSPOT_DELAY=500
     ports:
       - 3000:3000
+    volumes:
+      - ${PWD}/logs:/app/logs

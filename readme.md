@@ -45,6 +45,10 @@ Para utilizar a paginação basta passar dois [query parameters](https://branch.
 - `perPage` => Quantidade de resultados por página
 
 Caso os parametros sejam omitidos a aplicação retorna a query completa.
+
+## 📄 Logs
+Além de exibir os logs no console em runtime, a aplicação também armazena os logs em uma pasta `logs` na raíz da aplicação. Esta pasta é linkada com o container através de volumes, fazendo com que os logs do container sejam repassados para a máquina local sem a necessidade de nenhuma ação externa.
+
 ## 👁️ Observações
 
 - O arquivo `contatos.csv` foi movido para a pasta `desafio/data` por questões de organização
