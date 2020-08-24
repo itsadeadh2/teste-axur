@@ -28,6 +28,7 @@ Para configurar a aplicação basta editar o arquivo `docker-compose.yml` passan
 - `APP_HUBSPOT_DELAY` => Delay (em millisegundos) aplicado entre cada operação de cadastro enviada para a hubspot
 
 > Não colocar aspas nos valores nem adicionar espaço entre o atribuidor `=` seguir o padrão `VARIAVEL=VALOR DA VARIAVEL`
+caso a `APP_PORT` seja alterada, é necessário atualizar também a seção `ports` do `docker-compose.yml` para condizer com os novos valores
 
 ## 📁 Endpoints
 
