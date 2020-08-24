@@ -26,7 +26,6 @@ const createContact = async (user) => {
       },
     ],
   };
-  try {
     const {
       data,
     } = await axios.post(
@@ -35,11 +34,6 @@ const createContact = async (user) => {
       { params: { hapikey: variables.apiKey } }
     );
     return data;
-  } catch (e) {
-    throw new HubspotApiError(
-      `Failed to create contact on Hubspot: ${error.message}`
-    );
-  }
 };
 
 exports.createList = async (listName) => {
@@ -80,12 +74,17 @@ exports.addContactsToList = async (lista, contatos) => {
 
 exports.createContactFromUsers = async (users) => {
   const usersList = [];
+
   for (user of users) {
-    await new Promise((resolve) => {
-      setTimeout(async () => {
-        const { vid } = await createContact(user);
-        resolve(usersList.push(vid));
-      }, variables.waitTimeHubspot);
+    await new Promise((resolve, reject) => {
+        setTimeout(async () => {
+          try {
+            const { vid } = await createContact(user);
+            resolve(usersList.push(vid));
+          } catch (error) {
+            reject(error);
+          }
+        }, variables.waitTimeHubspot);      
     });
   }
   return usersList;
