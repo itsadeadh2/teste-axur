@@ -1,6 +1,6 @@
 # TESTE AXUR
 
-Teste para o processo seletivo de `back-end developer` da [Axur](https://axur.com/pt/).
+Teste para o processo seletivo de `back-end developer` da [Axur](https://axur.com/pt/) desenvolvido por Thiago Barbosa.
 
 ## 🔗 Requerimentos
 
