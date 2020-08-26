@@ -1,14 +1,14 @@
-const server = require("./config/initializers/server");
-const logger = require("./src/clients/logger");
-const hubspot = require("./config/initializers/hubspot");
+const server = require('./config/initializers/server')
+const logger = require('./src/clients/logger')
+const hubspot = require('./config/initializers/hubspot')
 
 // Initialize
 
 hubspot
   .populate()
   .then(() => {
-    server();
+    server()
   })
   .catch((err) => {
-    logger.error("[APP] initialization failed \n", err);
-  });
+    logger.error('[APP] initialization failed \n', err)
+  })

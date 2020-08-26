@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express')
 
-const domains = require("../routes/domains.route");
+const domains = require('../routes/domains.route')
 
 module.exports = (app) => {
-  app.use(express.json());
-  app.use("/domains", domains);
-};
+  app.use(express.json())
+  app.use('/domains', domains)
+}
