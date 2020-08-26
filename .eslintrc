@@ -3,7 +3,7 @@
     "commonjs": true,
     "node": true
   },
-  "extends": ["airbnb", "plugin:security/recommended", "plugin:you-dont-need-lodash-underscore/compatible", "prettier"],
+  "extends": ["airbnb", "plugin:security/recommended", "prettier"],
   "plugins": ["prettier", "security", "no-unsafe-regex"],
   "rules": {
     "prettier/prettier": ["error"],
@@ -29,6 +29,7 @@
       }
     ],
     "no-continue": "off",
-    "no-await-in-loop": "off"
+    "no-await-in-loop": "off",
+    "no-unused-vars": "off"
   }
 }
